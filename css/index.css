@@ -268,8 +268,8 @@ section{
 }
 
 .item img {
-    width: 50px;
-    height: 50px; 
+    width: 150px;
+    height:160px; 
     object-fit: cover; 
 }
 .item p{
@@ -299,3 +299,115 @@ section{
     background-size: 90%; 
 }
 
+/* The grey pole with the flags. */
+#pole {
+    position: absolute;
+    background-color: #A4A5AC;
+    height: 60vh;
+    width: 1vw;
+    right: 2.5vw;
+    bottom: 0;
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);;
+
+}
+
+/* The flag at the top of the pole. */
+#flag-1 {
+    position: absolute;
+    display: table;
+    background-color: #F99C43;
+    height: 13%;
+    width: 1100%;
+    right: -90px;
+    cursor: pointer;
+    top: 5%;
+    line-height: 550%;
+    text-align: center;
+    color: #7C2899;
+    font-weight: bold;
+    box-shadow: 0 0 10px 10px #D2008F;
+    transform: rotate(20deg);
+}
+
+#flag-2 {
+    position: absolute;
+    background-color: #A9CB42;
+    height: 75px;
+    width: 200px;
+    right: -90px;
+    top: 40%;
+    box-shadow: 0 0 10px 10px #E1E745;
+    line-height: 75px;
+    text-align: center;
+    color: #43521b;
+    font-weight: bold;
+    transform: rotate(-20deg);
+    cursor: pointer;
+}
+
+#flag-3 {
+    position: absolute;
+    background-color: #A9CB42;
+    height: 75px;
+    width: 200px;
+    right: -90px;
+    top: 75%;
+    box-shadow: 0 0 10px 10px #E1E745;
+    line-height: 75px;
+    text-align: center;
+    color: #43521b;
+    font-weight: bold;
+    transform: rotate(20deg);
+    cursor: pointer;
+}
+
+#bottom-container {
+    background-color: #FFA500; 
+    padding: 100px;
+    text-align: right;
+    border-radius: 20px;
+    margin: 100px auto;
+    margin-left: -500px auto;
+    max-width: 1500px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.speech-bubble {
+    position: relative;
+    background: #7a98ec;
+    border-radius: 15em;
+    padding: 10px;
+    display: inline-block;
+    margin: 10px auto;
+    text-align: center;
+    color: #f5f5f5;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.speech-bubble:after {
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border: 10px solid transparent;
+    border-top-color: #7a98ec;
+    border-bottom: 0;
+    margin-left: -10px;
+}
+
+/* The bottom orange part. */
+
+#bottom-page {
+    background-color: #FFA500; /* Orange color */
+    height: 1200px; /* Adjust the height as needed */
+    padding: 20px;
+    text-align: center;
+    border-radius: 20px;
+    margin: 45px auto;
+    max-width: 1500px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
