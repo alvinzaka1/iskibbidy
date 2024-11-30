@@ -1,0 +1,381 @@
+body{
+    font-family: 'Poppins', sans-serif;
+    overflow: auto;
+    background-color: #7bb4f5;
+}
+
+#iskibidy-container {
+    position: relative;
+    background-color: #7C2899; 
+    height: 50vh; 
+    border: 5px solid #fff53d; 
+    border-radius: 10px; 
+    top: 5vh; 
+    margin: 0 3vw; 
+ }
+
+#iskibidy-shape {
+    position: absolute;
+    background-color: #D2008F; 
+    clip-path: polygon(0 0, 100% 27%, 100% 78%, 0 100%); 
+    width: 32vw; 
+    height: 18vh; 
+    top: -6vh; 
+    left: 14vw; 
+}
+
+#iskibidy-logo {
+    position: absolute;
+    left: 14vw;
+    top: -8vh; 
+    margin-bottom: 20px;
+}
+#iskibidy-family {
+    position: absolute;
+    background-color: #fff53d;
+    height: 18vh;
+    width: 13vw;
+    right: 10vw;
+    border-radius: 10px;
+    top: -6vh;
+}
+
+/* The second background behind the iRizzler family. */
+#iskibidy-family-bg {
+    position: absolute;
+    background-color: #A4C83F;
+    height: 16vh;
+    width: 11vw;
+    border-radius: 10px;
+    border: 5px solid white;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+}
+
+/* The picture of the iRizzler family. */
+#iskibidy-family-pic {
+    position: absolute;
+    margin-left: 5%;
+    margin-bottom: 5%;
+    width: 11vw;
+    height: 20vh;
+}
+
+nav#iskibidy-nav{
+    background: linear-gradient(90deg, #ffccff, #ffd9cc);
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-top: 90px;
+}
+
+nav#iskibidy-nav ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 15px;
+}
+
+nav#iskibidy-nav ul li {
+    position: relative;
+}
+
+nav#iskibidy-nav ul li a{
+    display: block;
+    padding: 10px 20px;
+    color: #900090;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    background: #ffd9cc; 
+    border: 2px solid #ff99cc;
+    border-radius: 15px; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15); 
+    transition: all 0.3s ease-in-out;
+}
+
+nav#iskibidy-nav ul li a:hover{
+    background: #ff99cc;
+    color: white;
+    transform: scale(1.1);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.25);
+}   
+
+nav#icarly-nav ul li a.active {
+    background: #ffccff;
+    border-color: #ff66b2;
+}
+
+@media (max-width: 768px) {
+    nav#iskibidy-nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    nav#iskibidy-nav ul li a {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+#i {
+    font-size: 150px;
+    color: #fff53d;
+    -webkit-text-stroke: 0.5px darkblue; /* width and color */
+    text-shadow: 0px 0px 0 rgb(239,229,45),
+                 1px -1px 0 rgb(224,214,30),
+                 2px -2px 0 rgb(208,198,14),
+                 3px -3px  0 rgb(192,182,0),
+                 4px -4px 3px rgba(0,0,0,0.6),
+                 4px -4px 1px rgba(0,0,0,0.5),
+                 0px 0px 3px rgba(0,0,0,.2);
+ }
+
+#skibi {
+    font-size: 150px;
+    color: #24f1fc;
+    -webkit-text-stroke: 0.5px darkblue; /* width and color */
+    text-shadow: 0px 0px 0 rgb(20,225,236),
+                 1px -1px 0 rgb(5,210,221),
+                 2px -2px 0 rgb(-11,194,205),
+                 3px -3px  0 rgb(-27,178,189),
+                 4px -4px 3px rgba(0,0,0,0.6),
+                 4px -4px 1px rgba(0,0,0,0.5),
+                 0px 0px 3px rgba(0,0,0,.2);
+ }
+
+ #dy {
+       font-size: 150px;
+       color: #24f1fc;
+       -webkit-text-stroke: 0.5px darkblue; /* width and color */
+       text-shadow: 0px 0px 0 rgb(7,212,223),
+                    -1px -1px 0 rgb(-22,183,194),
+                    -2px -2px 0 rgb(-51,154,165),
+                    -3px -3px 0 rgb(-80,125,136),
+                    -4px -4px  0 rgb(-109,96,107),
+                    -5px -5px 4px rgba(0,0,0,0.48),
+                    -5px -5px 1px rgba(0,0,0,0.5),
+                    0px 0px 4px rgba(0,0,0,.2);
+ }
+
+ #com {
+       font-size: 100px;
+       color: #fff53d;
+       -webkit-text-stroke: 0.5px darkblue; /* width and color */
+       text-shadow: 0px 0px 0 rgb(226,216,32),
+                    -1px -1px 0 rgb(197,187,3),
+                    -2px -2px 0 rgb(168,158,0),
+                    -3px -3px 0 rgb(139,129,0),
+                    -4px -4px  0 rgb(110,100,0),
+                    -5px -5px 4px rgba(0,0,0,0.48),
+                    -5px -5px 1px rgba(0,0,0,0.5),
+                    0px 0px 4px rgba(0,0,0,.2);
+ }
+
+
+
+/* All ontop is just the navigation part plus the logo and the family picture. */
+
+
+
+section{
+    position: relative;
+    background-color: white;
+    height: 50vh;
+    border: 5px solid #fff53d;
+    border-radius: 50% 50% 10px 10px;
+    margin: 0 3vw;
+    bottom: 22vh;
+}
+
+#iskibidy-video{
+    position: absolute;
+    background-color: #E3E057;
+    top: -2vh;
+    z-index: 2;
+    height: 64.2vh;
+    width: 36vw;
+    border-radius: 5px;
+    left: -2vw;
+}
+
+#live-show {
+    position: absolute;
+    object-fit: cover;
+    width: 35vw;
+    height: 55vh;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    top: 2vh;
+    outline: none;
+}
+
+#racecar-pic {
+    position: absolute;
+    z-index: 3; 
+    width: 100%;
+    height: auto;
+    top: 57vh; 
+    left: -3vw;
+}
+
+#cool-webcast {
+    position: absolute;
+    left: 35vw;
+    font-size: 2.5em;
+}
+
+.cool-webcast-part1 {
+    color: #7C2899;
+}
+
+.cool-webcast-part2 {
+    color: #B9D26D;
+}
+
+.coolwebcastdiv {
+    height: 200px; 
+    width: 900px;
+    left: 800px;
+    top: 90px;
+    overflow-y: auto; 
+    border: 1px solid #ccc; 
+    padding: 10px; 
+    margin-top: 20px;
+    z-index: 3;
+    background-color: #944ed6;
+    position: relative;
+}
+
+.scrollable-content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    gap: 10px; 
+}
+
+.item img {
+    width: 50px;
+    height: 50px; 
+    object-fit: cover; 
+}
+.item p{
+    font-size: 1.5em;
+    color: white;
+}
+
+.coolwebcastdiv::-webkit-scrollbar {
+    width: 40px; 
+}
+
+.coolwebcastdiv::-webkit-scrollbar-track {
+    background: url('../img/chains.png'); 
+    border-radius: 1%;
+    border-radius: 10px; 
+    background-size: 50%;
+}
+
+.coolwebcastdiv::-webkit-scrollbar-thumb {
+    background: url('../img/zipper.png') no-repeat center center; 
+    background-size: 60%; 
+    border-radius: 10px;
+}
+
+.coolwebcastdiv::-webkit-scrollbar-thumb:hover {
+    background: url('../img/zipper.png') no-repeat center center; 
+    background-size: 90%; 
+}
+
+/* Trivia Container */
+#trivia-container {
+    background: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 20px 30px;
+    width: 90%;
+    max-width: 500px;
+    text-align: center;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+#choices {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+/* Choice Buttons */
+.choice {
+    background: #007bff;
+    color: white;
+    font-size: 16px;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.choice:hover {
+    background: #0056b3;
+    transform: scale(1.05);
+}
+
+.choice:active {
+    background: #003d80;
+}
+
+/* Next Button */
+#next-btn {
+    background: #28a745;
+    color: white;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+#next-btn:disabled {
+    background: #c3c3c3;
+    cursor: not-allowed;
+}
+
+#next-btn:hover:not(:disabled) {
+    background: #218838;
+    transform: scale(1.05);
+}
+
+/* Result Text */
+#result {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

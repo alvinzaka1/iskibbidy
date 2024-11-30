@@ -10,7 +10,7 @@
       rel="stylesheet"
     />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/trivia.css">
 </head>
 
 <body>
@@ -39,36 +39,14 @@
         </div>
     </header>
 
-    <section>
-        <div id="iskibidy-video">
-            <video id="live-show" controls>
-                <source src="videos/icarlythemesong.mp4" type="video/mp4">
-            </video>
-        </div>
-        <div id="racecar-pic">
-            <img src="img/race_car.png" alt="racecar">
-        </div>
-        <h1 id="cool-webcast">
-            <span class="cool-webcast-part1">Skibidy</span>
-            <span class="cool-webcast-part2">highlights</span>
-        </h1>
-        <div class="coolwebcastdiv">
-            <div class="scrollable-content">
-                <div class="item">
-                    <img src="img/image1.png" alt="Image 1">
-                    <p>I love you</p>
-                </div>
-                <div class="item">
-                    <img src="img/image2.png" alt="Image 2">
-                    <p>Text for Image 2</p>
-                </div>
-                <div class="item">
-                    <img src="img/image3.png" alt="Image 3">
-                    <p>Text for Image 3</p>
-                </div>
-        </div>
-    </section>
-
+    <section id="trivia-container">
+        <h2 id="question"></h2>
+        <div id="choices"></div>
+        <button id="next-btn" disabled>Next Question</button>
+        <p id="result"></p>
+    </section>    
+    <script src="js/trivia.js"></script>
+    
 
 </body>
 </html>
