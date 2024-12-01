@@ -11,6 +11,12 @@
     />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/index.css">
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init("hGhnNpaYrcv4jcJ5h");
+   })();
+</script>
 </head>
 
 <body>
@@ -82,15 +88,117 @@
         </div>
 
         <div id="bottom-container">
-            <div class="speech-bubble">
-                <p>Do you have any cool talents? We wanna see them!!!</p>
-                <p>Got any questions? Contact us!!!</p>
+            <div class="ad-content">
+                <img src="../img/gaylittlemonkey.gif" alt="GIF Monkey" class="left-image">
+                <div class="mail-text">
+                    <p>Have any cool talents!!! Tell us about them!!!</p>
+                </div>
+                <img src="../img/gaylittlemonkey.gif" alt="GIF Monkey" class="right-image">
             </div>
+            <form id="contact-form">
+                <input type="text" name="user_name" placeholder="Your Name" required>
+                <input type="email" name="user_email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" required></textarea>
+                <button type="submit">Send</button>
+            </form>
+            <script type="text/javascript">
+                document.getElementById('contact-form').addEventListener('submit', function(event) {
+                    event.preventDefault();
+                
+                    emailjs.sendForm("service_dnqzitk", 'template_z6a0gss', this)
+                        .then(function() {
+                            alert('Email sent successfully!');
+                        }, function(error) {
+                            alert('Failed to send email. Error: ' + JSON.stringify(error));
+                        });
+                });
+                </script>
         </div>
     </section>
 
     <section id="bottom-page">
+        <div class="quiz-container" id ="quiz">
+            <div class ="quiz-header">
+                <h2 id="question">AP Brainrot Exam</h2>
+                <ul>
+                    <li>
+                        <input class ="answer" type = "radio" name="answer" id ="a" >
+                        <label for="a" id="optionA">Option A</label>
+                    </li>
+
+                    <li>
+                        <input class ="answer" type = "radio" name="answer" id ="b" >
+                        <label for="b" id="optionB">Option B</label>
+                    </li>
+
+                    <li>
+                        <input class ="answer" type = "radio" name="answer" id ="c" >
+                        <label for="c" id="optionC">Option C</label>
+                    </li>
+
+                    <li>
+                        <input class ="answer" type = "radio" name="answer" id ="d" >
+                        <label for="d" id="optionD">Option D</label>
+                    </li>
+                </ul>
+            </div>
+            <button id="submit">Submit</button>
+
+        </div>
+        <div class="the-rizzler">
+            <img src="../img/the_Rizzler.png" alt="Rizzler" id="rizzler-img">
+            <p>Go to the <a href="../html/snaps.html" target="_blank" rel="noopener">iSnaps</a> page to find out why the Rizzler is the KING OF RIZZ!!!</p>
+        </div>
+        <div class="cant-stop">
+            <h1>Why You Can't Stop Checking iSkibidy...</h1>
+            <p><span id="show-images" style="color: rgb(240, 63, 57); cursor: pointer;">Here</span> are the top 24 reasons you still gotta see iSkibidy.</p>
+            <div class="gallery" id="gallery" style="display: none;">
+                <div class="gallery-container">
+                    <span><img src="../img/chill_guy.png" alt="reason1"></span>
+                    <span><img src="../img/chill_guy.png" alt="reason2"></span>
+                    <span><img src="../img/chill_guy.png" alt="reason3"></span>
+                    <span><img src="../img/chill_guy.png" alt="reason4"></span>
+                    <span><img src="../img/chill_guy.png" alt="reason5"></span>
+                    <span><img src="../img/chill_guy.png" alt="reason6"></span>
+                    <span><img src="../img/chill_guy.png" alt="reason1"></span>
+                    <span><img src="../img/chill_guy.png" alt="reason2"></span>
+                    <span><img src="../img/chill_guy.png" alt="reason3"></span>
+                    <span><img src="../img/chill_guy.png" alt="reason4"></span>
+                    <span><img src="../img/chill_guy.png" alt="reason5"></span>
+                    <span><img src="../img/chill_guy.png" alt="reason6"></span>
+                    <span><img src="../img/chill_guy.png" alt="reason1"></span>
+                    <span><img src="../img/chill_guy.png" alt="reason2"></span>
+                    <span><img src="../img/chill_guy.png" alt="reason3"></span>
+                    <span><img src="../img/chill_guy.png" alt="reason4"></span>
+                    <span><img src="../img/chill_guy.png" alt="reason5"></span>
+                    <span><img src="../img/chill_guy.png" alt="reason6"></span>
+                    <span><img src="../img/chill_guy.png" alt="reason1"></span>
+                    <span><img src="../img/chill_guy.png" alt="reason2"></span>
+                    <span><img src="../img/chill_guy.png" alt="reason3"></span>
+                    <span><img src="../img/chill_guy.png" alt="reason4"></span>
+                    <span><img src="../img/chill_guy.png" alt="reason5"></span>
+                    <span><img src="../img/chill_guy.png" alt="reason6"></span>
+                </div>
+                <p>It wouldn't be very chill.</p>
+                <audio id="my-audio" src="../songs/chillguyanthem.mp3"></audio>
+            </div>
+        </div>
+        <div class="random-pictures">
+            <img src="../img/spencer_shay.png" alt="Spencer Shay" id="spencer-img">
+            <img src="../img/spencer_laying.png" alt="Spencer Shay Lay" id="spencerlay-img">
+        </div>
     </section>
-    
+    <script src="../js/index.js"></script>
+    <footer>
+        <div class="footer-container">
+            <p>&copy; 2023 iSkibidy. All rights reserved.</p>
+            <div class="social-media">
+                <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

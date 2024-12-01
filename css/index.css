@@ -360,54 +360,255 @@ section{
     transform: rotate(20deg);
     cursor: pointer;
 }
-
+/*Gay Little Monkey*/
 #bottom-container {
     background-color: #FFA500; 
-    padding: 100px;
-    text-align: right;
+    padding: 50px;
+    text-align: center;
     border-radius: 20px;
-    margin: 100px auto;
-    margin-left: -500px auto;
-    max-width: 1500px;
+    margin: 100px 0 100px 780px; 
+    max-width: 800px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.speech-bubble {
-    position: relative;
-    background: #7a98ec;
-    border-radius: 15em;
-    padding: 10px;
-    display: inline-block;
-    margin: 10px auto;
-    text-align: center;
-    color: #f5f5f5;
-    font-weight: bold;
-    font-size: 1.2em;
+#bottom-container .ad-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2px;
 }
 
-.speech-bubble:after {
-    content: '';
-    position: absolute;
-    bottom: -20px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 0;
-    height: 0;
-    border: 10px solid transparent;
-    border-top-color: #7a98ec;
-    border-bottom: 0;
-    margin-left: -10px;
+#bottom-container .left-image,
+#bottom-container .right-image {
+    max-width: 50px; 
+}
+
+#bottom-container .ad-content p {
+    margin: 0 10px; 
+    flex-grow: 1;
+    text-align: center;
+}
+
+/* The contact us part. */
+
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 400px;
+    margin: auto;
+    display: flex;
+    height: 100px;
+    overflow-y: auto;
+}
+
+#contact-form input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    height: 50px;
+}
+
+#contact-form textarea {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    height: 100px;
+    
+}
+
+#contact-form button {
+    padding: 10px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+#contact-form button:hover {
+    background-color: #45a049;
 }
 
 /* The bottom orange part. */
 
 #bottom-page {
     background-color: #FFA500; /* Orange color */
-    height: 1200px; /* Adjust the height as needed */
+    height: 1200px; 
     padding: 20px;
     text-align: center;
     border-radius: 20px;
     margin: 45px auto;
     max-width: 1500px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* quiz content css */
+.quiz-container{
+    background: #7C2899;
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
+    width: 600px;
+    position: absolute; 
+    right: 0; 
+    top: 20px; 
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.quiz-header{
+    padding: 4rem;
+}
+
+h2{
+    padding: 1rem;
+    text-align: center;
+    margin: 0;
+}
+
+ul{
+    list-style-type: disc;
+    padding: 0;
+}
+
+ul li{
+    font-size: 1.2rem;
+    margin: 1rem;
+}
+
+ul li label{
+    cursor: pointer;
+}
+
+button{
+    background: #ff66b2;
+    color: #fff;
+    border: none;
+    display: block;
+    width: 100%;
+    cursor: pointer;
+    font-size: 1.1rem;
+    padding: 1.1rem;
+}
+
+/* The rizzler part. */
+
+.the-rizzler{
+    background: #5575cc;
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
+    width: 600px;
+    position: absolute; 
+    left: 0;
+    top: 200px; 
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#rizzler-img {
+    width: 200px; 
+    height: auto;
+    border: 80px solid transparent;
+    padding: 10px;
+    background: url('../img/super_saiyan_aura.gif') center/cover; 
+    border-radius: 10px; 
+}
+/*The gallery part.*/
+.cant-stop {
+    background: #ffffff;
+    box-shadow: 0 0 10px 5px rgba(50, 120, 201, 0.5);
+    position: absolute; 
+    bottom: 20px; /* Adjust the bottom position as needed */
+    left: 50%; 
+    transform: translateX(-50%); 
+    text-align: center;
+    margin: 20px 0;
+    width: 100%;
+    padding: 50px;
+}
+.cant-stop p{
+    font-size: 1.5rem;
+    color: #000000;
+    margin: 0;
+}
+
+.gallery {
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+}
+
+.gallery-container {
+    display: inline-block;
+}
+
+.gallery span {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.gallery img {
+    width: 150px; 
+    height: auto; 
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/*random pictures*/
+.random-pictures {
+    text-align: right;
+    margin-top: 20px;
+    position: 0; 
+}
+#spencer-img{
+    width: 700px;
+    height: auto;
+    border-radius: 10px;
+}
+#spencerlay-img{
+    width: 700px;
+    height: auto;
+    border-radius: 10px;
+}
+/*Footer area*/
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-container p {
+    margin: 0;
+    font-size: 1rem;
+}
+
+.social-media {
+    margin-top: 10px;
+}
+
+.social-media a {
+    color: #fff;
+    margin: 0 10px;
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+
+.social-media a:hover {
+    color: #ffcc00;
 }
