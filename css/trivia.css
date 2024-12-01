@@ -299,16 +299,7 @@ nav#iskibidy-nav ul li {
     overflow: hidden;
 }
 
-#trivia-container::before {
-    content: '';
-    position: absolute;
-    top: -30px;
-    left: -30px;
-    width: 100px;
-    height: 100px;
-    background-color: #FF69B4;
-    transform: rotate(45deg);
-}
+
 
 #question {
     font-size: 1.8em;
