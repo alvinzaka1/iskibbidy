@@ -35,6 +35,7 @@ const questionEl = document.getElementById("question");
 const choicesEl = document.getElementById("choices");
 const nextButton = document.getElementById("next-btn");
 const resultEl = document.getElementById("result");
+const playNowButon = document.getElementById("playButton");
 
 // Display the current question
 function displayQuestion() {
@@ -81,6 +82,13 @@ nextButton.addEventListener("click", () => {
         endQuiz();
     }
 });
+
+playNowButon.addEventListener("click", () => {
+    triviaContainer.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+    });
+})
 
 // End the quiz
 function endQuiz() {

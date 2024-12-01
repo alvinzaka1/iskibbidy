@@ -5,8 +5,15 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: #ffffff;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+.page-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 .container {
@@ -18,75 +25,99 @@ body {
 /* Header Styles */
 #iskibidy-container {
     position: relative;
-    background-color: #7C2899; 
-    height: 50vh; 
-    border: 5px solid #fff53d; 
-    border-radius: 10px; 
-    top: 5vh; 
-    margin: 0 3vw; 
- }
+    background: linear-gradient(135deg, #7C2899, #D2008F);
+    height: 250px;
+    border: 8px solid #fff53d;
+    border-radius: 20px;
+    margin: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
 
 #iskibidy-shape {
     position: absolute;
-    background-color: #D2008F; 
-    clip-path: polygon(0 0, 100% 27%, 100% 78%, 0 100%); 
-    width: 32vw; 
-    height: 18vh; 
-    top: -6vh; 
-    left: 14vw; 
+    background-color: #D2008F;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
+    width: 40%;
+    height: 100%;
+    top: 0;
+    left: 0;
 }
 
 #iskibidy-logo {
     position: absolute;
-    left: 14vw;
-    top: -8vh; 
-    margin-bottom: 20px;
+    left: 5%;
+    top: 10px;
+    transform: rotate(-5deg);
+    transition: transform 0.3s ease;
 }
+
+#iskibidy-logo:hover {
+    transform: rotate(0deg) scale(1.05);
+}
+
+#i, #skibi, #dy, #com {
+    display: inline-block;
+    font-size: 60px;
+    font-weight: bold;
+    text-shadow: 3px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+#i { color: #fff53d; }
+#skibi { color: #24f1fc; }
+#dy { color: #ff69b4; }
+#com { color: #fff53d; font-size: 40px; }
+
 #iskibidy-family {
     position: absolute;
     background-color: #fff53d;
-    height: 18vh;
-    width: 13vw;
-    right: 10vw;
-    border-radius: 10px;
-    top: -6vh;
+    height: 150px;
+    width: 150px;
+    right: 5%;
+    top: 20px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease;
 }
 
-/* The second background behind the iRizzler family. */
+#iskibidy-family:hover {
+    transform: scale(1.1) rotate(5deg);
+}
+
 #iskibidy-family-bg {
     position: absolute;
     background-color: #A4C83F;
-    height: 16vh;
-    width: 11vw;
-    border-radius: 10px;
-    border: 5px solid white;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    margin: 0 auto;
+    height: 90%;
+    width: 90%;
+    border-radius: 50%;
+    top: 5%;
+    left: 5%;
 }
 
-/* The picture of the iRizzler family. */
 #iskibidy-family-pic {
     position: absolute;
-    margin-left: 5%;
-    margin-bottom: 5%;
-    width: 11vw;
-    height: 20vh;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
-nav#iskibidy-nav{
+nav#iskibidy-nav {
     background: linear-gradient(90deg, #ffccff, #ffd9cc);
-    padding: 10px 20px;
+    padding: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 20px;
+    border-radius: 30px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    margin-top: 90px;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
 }
 
-nav#iskibidy-nav ul{
+nav#iskibidy-nav ul {
     list-style: none;
     margin: 0;
     padding: 0;
@@ -98,128 +129,53 @@ nav#iskibidy-nav ul li {
     position: relative;
 }
 
-nav#iskibidy-nav ul li a{
-    display: block;
+.nav-item {
+    display: inline-block;
     padding: 10px 20px;
     color: #900090;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 18px;
     font-weight: bold;
-    text-align: center;
-    background: #ffd9cc; 
+    background: #ffd9cc;
     border: 2px solid #ff99cc;
-    border-radius: 15px; 
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15); 
+    border-radius: 25px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
     transition: all 0.3s ease-in-out;
 }
 
-nav#iskibidy-nav ul li a:hover{
+.nav-item:hover {
     background: #ff99cc;
     color: white;
-    transform: scale(1.1);
+    transform: translateY(-5px) scale(1.05);
     box-shadow: 0 6px 8px rgba(0, 0, 0, 0.25);
-}   
-
-nav#icarly-nav ul li a.active {
-    background: #ffccff;
-    border-color: #ff66b2;
 }
 
-@media (max-width: 768px) {
-    nav#iskibidy-nav ul {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    nav#iskibidy-nav ul li a {
-        width: 100%;
-        text-align: center;
-    }
-}
-
-#i {
-    font-size: 150px;
-    color: #fff53d;
-    -webkit-text-stroke: 0.5px darkblue; /* width and color */
-    text-shadow: 0px 0px 0 rgb(239,229,45),
-                 1px -1px 0 rgb(224,214,30),
-                 2px -2px 0 rgb(208,198,14),
-                 3px -3px  0 rgb(192,182,0),
-                 4px -4px 3px rgba(0,0,0,0.6),
-                 4px -4px 1px rgba(0,0,0,0.5),
-                 0px 0px 3px rgba(0,0,0,.2);
- }
-
-#skibi {
-    font-size: 150px;
-    color: #24f1fc;
-    -webkit-text-stroke: 0.5px darkblue; /* width and color */
-    text-shadow: 0px 0px 0 rgb(20,225,236),
-                 1px -1px 0 rgb(5,210,221),
-                 2px -2px 0 rgb(-11,194,205),
-                 3px -3px  0 rgb(-27,178,189),
-                 4px -4px 3px rgba(0,0,0,0.6),
-                 4px -4px 1px rgba(0,0,0,0.5),
-                 0px 0px 3px rgba(0,0,0,.2);
- }
-
- #dy {
-       font-size: 150px;
-       color: #24f1fc;
-       -webkit-text-stroke: 0.5px darkblue; /* width and color */
-       text-shadow: 0px 0px 0 rgb(7,212,223),
-                    -1px -1px 0 rgb(-22,183,194),
-                    -2px -2px 0 rgb(-51,154,165),
-                    -3px -3px 0 rgb(-80,125,136),
-                    -4px -4px  0 rgb(-109,96,107),
-                    -5px -5px 4px rgba(0,0,0,0.48),
-                    -5px -5px 1px rgba(0,0,0,0.5),
-                    0px 0px 4px rgba(0,0,0,.2);
- }
-
- #com {
-       font-size: 100px;
-       color: #fff53d;
-       -webkit-text-stroke: 0.5px darkblue; /* width and color */
-       text-shadow: 0px 0px 0 rgb(226,216,32),
-                    -1px -1px 0 rgb(197,187,3),
-                    -2px -2px 0 rgb(168,158,0),
-                    -3px -3px 0 rgb(139,129,0),
-                    -4px -4px  0 rgb(110,100,0),
-                    -5px -5px 4px rgba(0,0,0,0.48),
-                    -5px -5px 1px rgba(0,0,0,0.5),
-                    0px 0px 4px rgba(0,0,0,.2);
- }
-.extra-links a {
-    color: white;
-    text-decoration: none;
-    padding: 5px 15px;
-    border-radius: 5px;
-    font-weight: bold;
-}
-
-.sam-cat {
-    background-color: #0000FF;
-    margin-right: 10px;
-}
-
-.visit-nick {
-    background-color: #4B0082;
+.nav-item i {
+    margin-right: 5px;
 }
 
 /* Main Content Styles */
 .content-wrapper {
     display: flex;
-    gap: 20px;
+    gap: 30px;
     margin-top: 40px;
+    background: linear-gradient(45deg, #ff99cc, #99ccff);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
 }
 
 .promo-image {
     flex: 1;
-    border: 4px solid #00FFFF;
-    border-radius: 15px;
+    border: 6px solid #00FFFF;
+    border-radius: 20px;
     padding: 10px;
     background: linear-gradient(to bottom, #000080, #0000CD);
+    transition: transform 0.3s ease;
+}
+
+.promo-image:hover {
+    transform: scale(1.05);
 }
 
 .promo-image img {
@@ -229,58 +185,65 @@ nav#icarly-nav ul li a.active {
 
 .quiz-panel {
     flex: 1;
-    background-color: #0000CD;
-    border-radius: 15px;
-    padding: 20px;
+    background: linear-gradient(135deg, #0000CD, #4169E1);
+    border-radius: 20px;
+    padding: 30px;
     color: white;
     position: relative;
+    overflow: hidden;
 }
 
 .trivia-title {
-    position: absolute;
-    top: -30px;
-    left: 30%;
-    transform: translateY(-50%);
-    font-size: 6em;
+    font-size: 4em;
     background: linear-gradient(to right, #FFD700, #00FFFF);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    margin-bottom: 20px;
 }
 
 .quiz-content h3 {
     background-color: #9ACD32;
     color: white;
     text-align: center;
-    padding: 10px;
+    padding: 15px;
     border-radius: 25px;
     margin-bottom: 20px;
+    font-size: 1.5em;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
 }
 
 .quiz-content p {
     font-size: 1.2em;
     margin-bottom: 20px;
+    text-align: center;
 }
 
 .play-now {
-    background-color: black;
+    background: linear-gradient(90deg, #FF6B6B, #4ECDC4);
     color: white;
     border: none;
     padding: 15px 30px;
     font-size: 1.5em;
     font-weight: bold;
-    border-radius: 25px;
+    border-radius: 50px;
     cursor: pointer;
     position: relative;
     overflow: hidden;
     width: 100%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.play-now:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
 }
 
 .pulse {
     position: absolute;
-    background-color: #FFD700;
-    width: 10px;
-    height: 10px;
+    background-color: rgba(255, 255, 255, 0.7);
+    width: 20px;
+    height: 20px;
     border-radius: 50%;
     animation: pulse 1.5s infinite;
 }
@@ -297,18 +260,23 @@ nav#icarly-nav ul li a.active {
 .latest-trivia {
     margin-top: 40px;
     position: relative;
+    background: linear-gradient(45deg, #FF6B6B, #4ECDC4);
+    padding: 20px;
+    border-radius: 15px;
 }
 
 .latest-label {
     position: absolute;
-    top: -20px;
-    left: -20px;
+    top: -15px;
+    left: -15px;
     background-color: #FF0000;
     color: white;
     padding: 5px 15px;
     transform: rotate(-8deg);
     font-weight: bold;
     font-size: 1.2em;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
 }
 
 .latest-trivia h2 {
@@ -318,38 +286,15 @@ nav#icarly-nav ul li a.active {
     padding: 10px 20px;
     border-radius: 10px;
     font-size: 1.8em;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .header-content, nav .container, .content-wrapper {
-        flex-direction: column;
-    }
-
-    .search, .extra-links {
-        margin-top: 20px;
-    }
-
-    .nav-links {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .nav-links li {
-        margin-bottom: 10px;
-    }
-
-    .quiz-panel {
-        margin-top: 40px;
-    }
+    margin-left: 20px;
 }
 
 #trivia-container {
-    background-color: #FFD700;
-    border-radius: 15px;
-    padding: 20px;
+    background: linear-gradient(135deg, #FFD700, #FFA500);
+    border-radius: 20px;
+    padding: 30px;
     margin-top: 40px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
     position: relative;
     overflow: hidden;
 }
@@ -357,75 +302,122 @@ nav#icarly-nav ul li a.active {
 #trivia-container::before {
     content: '';
     position: absolute;
-    top: -20px;
-    left: -20px;
-    width: 60px;
-    height: 60px;
+    top: -30px;
+    left: -30px;
+    width: 100px;
+    height: 100px;
     background-color: #FF69B4;
     transform: rotate(45deg);
 }
 
 #question {
-    font-size: 1.5em;
+    font-size: 1.8em;
     color: #0000CD;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     text-align: center;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
 }
 
 #choices {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
-    margin-bottom: 20px;
+    gap: 20px;
+    margin-bottom: 30px;
 }
 
-.choice button {
-    background-color: #FF69B4;
+.choice-btn {
+    background: linear-gradient(90deg, #FF69B4, #FF1493);
     color: white;
     border: none;
-    padding: 10px;
-    font-size: 1em;
-    border-radius: 5px;
+    padding: 15px;
+    font-size: 1.2em;
+    border-radius: 15px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
-.choice button:hover {
-    background-color: #FF1493;
+.choice-btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 8px rgba(0,0,0,0.2);
 }
 
 #next-btn {
-    background-color: #32CD32;
+    background: linear-gradient(90deg, #32CD32, #228B22);
     color: white;
     border: none;
-    padding: 10px 20px;
-    font-size: 1em;
-    border-radius: 5px;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    border-radius: 50px;
     cursor: pointer;
     display: block;
     margin: 0 auto;
-    transition: background-color 0.3s;
+    transition: all 0.3s ease;
 }
 
 #next-btn:disabled {
-    background-color: #A9A9A9;
+    background: #A9A9A9;
     cursor: not-allowed;
 }
 
 #next-btn:not(:disabled):hover {
-    background-color: #228B22;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
 #result {
     text-align: center;
     font-weight: bold;
     margin-top: 20px;
-    font-size: 1.2em;
+    font-size: 1.4em;
     color: #0000CD;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
 }
 
-/* Responsive Design for Trivia Container */
+footer {
+    background: linear-gradient(90deg, #7C2899, #D2008F);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: auto;
+}
+
+/* Responsive Design */
 @media (max-width: 768px) {
+    #iskibidy-container {
+        height: auto;
+        padding-bottom: 100px;
+    }
+
+    #iskibidy-logo {
+        position: relative;
+        left: 0;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    #iskibidy-family {
+        position: relative;
+        margin: 20px auto;
+        right: 0;
+    }
+
+    nav#iskibidy-nav {
+        position: relative;
+        bottom: 0;
+        width: 100%;
+        border-radius: 0;
+    }
+
+    nav#iskibidy-nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .content-wrapper {
+        flex-direction: column;
+    }
+
     #choices {
         grid-template-columns: 1fr;
     }
