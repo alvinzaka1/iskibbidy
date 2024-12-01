@@ -7,7 +7,7 @@ body{
 #iskibidy-container {
     position: relative;
     background-color: #7C2899; 
-    height: 50vh; 
+    height: 20vh; 
     border: 5px solid #fff53d; 
     border-radius: 10px; 
     top: 5vh; 
@@ -184,118 +184,133 @@ nav#icarly-nav ul li a.active {
 /* All ontop is just the navigation part plus the logo and the family picture. */
 
 
+#job-listings {
+    display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center; 
+  align-items: center; 
+  margin: 2rem auto; 
+  max-width: 1200px; 
+  }
+  
+  .job-card {
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem;
+    width: 300px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin: auto;
+  }
+  
+  .job-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .job-card p {
+    margin: 0.25rem 0;
+  }
+  
+  .job-card a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .job-card a:hover {
+    text-decoration: underline;
+  }
 
-section{
-    position: relative;
-    background-color: white;
-    height: 50vh;
-    border: 5px solid #fff53d;
-    border-radius: 50% 50% 10px 10px;
-    margin: 0 3vw;
-    bottom: 22vh;
+  #snaps-content h2 {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-top: 3rem; 
+  color: #333; 
 }
+#snaps-content {
+    padding-top: 10rem; 
+  }
 
-#iskibidy-video{
-    position: absolute;
-    background-color: #E3E057;
-    top: -2vh;
-    z-index: 2;
-    height: 64.2vh;
-    width: 36vw;
-    border-radius: 5px;
-    left: -2vw;
-}
-
-#live-show {
-    position: absolute;
-    object-fit: cover;
-    width: 35vw;
-    height: 55vh;
-    margin: 0 auto;
-    left: 0;
+  #pagination-controls button {
+    padding: 0.5rem 1rem;
+    margin: 0.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  #pagination-controls button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05); 
+  }
+  .image-column {
+    position: fixed;
+    top: 0;
+    width: 150px;
+    height: 100%;
+    display: flex;
+    flex-direction: column; 
+    justify-content: space-evenly; 
+    align-items: center; 
+    pointer-events: none; 
+    z-index: 1;
+  }
+  
+  .image-column.left {
+    left: 0; 
+  }
+  
+  .image-column.right {
     right: 0;
-    top: 2vh;
-    outline: none;
-}
-
-#racecar-pic {
-    position: absolute;
-    z-index: 3; 
-    width: 100%;
+  }
+  
+  .image-column img {
+    width: 120px; 
     height: auto;
-    top: 57vh; 
-    left: -3vw;
-}
-
-#cool-webcast {
-    position: absolute;
-    left: 35vw;
-    font-size: 2.5em;
-}
-
-.cool-webcast-part1 {
-    color: #7C2899;
-}
-
-.cool-webcast-part2 {
-    color: #B9D26D;
-}
-
-.coolwebcastdiv {
-    height: 200px; 
-    width: 900px;
-    left: 800px;
-    top: 90px;
-    overflow-y: auto; 
-    border: 1px solid #ccc; 
-    padding: 10px; 
-    margin-top: 20px;
-    z-index: 3;
-    background-color: #944ed6;
+  }
+  
+  footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
     position: relative;
+    width: 100%;
+    bottom: 0;
 }
 
-.scrollable-content {
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
-    gap: 10px;
-}
-
-.item {
-    display: flex;
     align-items: center;
-    gap: 10px; 
 }
 
-.item img {
-    width: 50px;
-    height: 50px; 
-    object-fit: cover; 
-}
-.item p{
-    font-size: 1.5em;
-    color: white;
+.footer-container p {
+    margin: 0;
+    font-size: 1rem;
 }
 
-.coolwebcastdiv::-webkit-scrollbar {
-    width: 40px; 
+.social-media {
+    margin-top: 10px;
 }
 
-.coolwebcastdiv::-webkit-scrollbar-track {
-    background: url('../img/chains.png'); 
-    border-radius: 1%;
-    border-radius: 10px; 
-    background-size: 50%;
+.social-media a {
+    color: #fff;
+    margin: 0 10px;
+    font-size: 1.5rem;
+    text-decoration: none;
 }
 
-.coolwebcastdiv::-webkit-scrollbar-thumb {
-    background: url('../img/zipper.png') no-repeat center center; 
-    background-size: 60%; 
-    border-radius: 10px;
+.social-media a:hover {
+    color: #ffcc00;
 }
-
-.coolwebcastdiv::-webkit-scrollbar-thumb:hover {
-    background: url('../img/zipper.png') no-repeat center center; 
-    background-size: 90%; 
-}
-
