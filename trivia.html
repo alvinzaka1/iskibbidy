@@ -3,66 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ISkibidy Trivia</title>
+    <title>iSkibidy Trivia</title>
     <link rel="stylesheet" href="css/trivia.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <header>
-        <div id= "iskibidy-container">
-            <div id = "iskibidy-shape"> </div>
-            <a href="index.html" id="iskibidy-logo-link">
-                <h1 id ="iskibidy-logo">
-                    <span id="i">i</span>
-                    <span id="skibi">skibbi</span>
-                    <span id ="dy">dy</span>
-                    <span id = "com">.com</span></h1>
-            </a>
-            <div id = "iskibidy-family">
-                 <div id="iskibidy-family-bg"></div>
-                 <img id="iskibidy-family-pic" src="img/rizzlerfamily.png" alt="iskibidy-fam">
+    <div class="page-wrapper">
+        <header>
+            <div id="iskibidy-container">
+                <div id="iskibidy-shape"></div>
+                <a href="index.html" id="iskibidy-logo-link">
+                    <h1 id="iskibidy-logo">
+                        <span id="i">i</span>
+                        <span id="skibi">skibi</span>
+                        <span id="dy">dy</span>
+                        <span id="com">.com</span>
+                    </h1>
+                </a>
+                <div id="iskibidy-family">
+                    <div id="iskibidy-family-bg"></div>
+                    <img id="iskibidy-family-pic" src="img/rizzlerfamily.png" alt="iskibidy-fam">
+                </div>
+                <nav id="iskibidy-nav">
+                    <ul>
+                        <li><a href="#" class="nav-item"><i class="fas fa-comment"></i> iBlogs</a></li>
+                        <li><a href="snaps.html" class="nav-item"><i class="fas fa-camera"></i> iSnaps</a></li>
+                        <li><a href="trivia.html" class="nav-item"><i class="fas fa-lightbulb"></i> iTrivia</a></li>
+                        <li><a href="#" class="nav-item"><i class="fas fa-video"></i> iVideo</a></li>
+                    </ul>
+                </nav>
             </div>
-            <nav id="iskibidy-nav">
-                <ul>
-                    <li><a href="#"><i class="fas fa-comment"></i> iBlogs</a></li>
-                    <li><a href="snaps.html"><i class="fas fa-camera"></i> iSnaps</a></li>
-                    <li><a href="trivia.html"><i class="fas fa-lightbulb"></i> iTrivia</a></li>
-                    <li><a href="#"><i class="fas fa-video"></i> iVideo</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+        </header>
 
-    <main class="container">
-        <div class="content-wrapper">
-            <div class="promo-image">
-                <img src="img/avatar.png" alt="iCarly Trivia">
-            </div>
-            <div class="quiz-panel">
-                <h1 class="trivia-title">Trivia</h1>
-                <div class="quiz-content">
-                    <h3>ISkibidy Tech Quiz</h3>
-                    <p>How well do you know your ISkibidy tech skills!</p>
-                    <button class="play-now">
-                        <span class="pulse"></span>
-                        <span class="pulse"></span>
-                        <span class="pulse"></span>
-                        PLAY NOW!
-                    </button>
+        <main class="container">
+            <div class="content-wrapper">
+                <div class="promo-image">
+                    <img src="img/avatar.png" alt="iSkibidy Trivia">
+                </div>
+                <div class="quiz-panel">
+                    <h2 class="trivia-title">Trivia</h2>
+                    <div class="quiz-content">
+                        <h3>iSkibidy Tech Quiz</h3>
+                        <p>How well do you know your iSkibidy tech skills?</p>
+                        <button class="play-now" id="playButton">
+                            <span class="pulse"></span>
+                            <span class="pulse"></span>
+                            <span class="pulse"></span>
+                            PLAY NOW!
+                        </button>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="latest-trivia">
-            <div class="latest-label">LATEST</div>
-            <h2>AWESOME TRIVIA</h2>
-        </div>
+            <div class="latest-trivia">
+                <div class="latest-label">LATEST</div>
+                <h2>AWESOME TRIVIA</h2>
+            </div>
 
-        <section id="trivia-container">
-            <h2 id="question"></h2>
-            <div id="choices"></div>
-            <button id="next-btn" disabled>Next Question</button>
-            <p id="result"></p>
-        </section>
-    </main>
+            <section id="trivia-container">
+                <h2 id="question"></h2>
+                <div id="choices"></div>
+                <button id="next-btn" disabled>Next Question</button>
+                <p id="result"></p>
+            </section>
+        </main>
+        <footer>
+            <p>&copy; 2023 iSkibidy.com | All rights reserved</p>
+        </footer>
+    </div>
     <script src="js/trivia.js"></script>
-</body>]
+</body>
 </html>
