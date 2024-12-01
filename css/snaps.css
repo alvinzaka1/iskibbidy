@@ -32,7 +32,7 @@ body{
 }
 #iskibidy-family {
     position: absolute;
-    background-color: #fff53d;
+    background-color: #BECC41;
     height: 18vh;
     width: 13vw;
     right: 10vw;
@@ -41,26 +41,16 @@ body{
 }
 
 /* The second background behind the iRizzler family. */
-#iskibidy-family-bg {
-    position: absolute;
-    background-color: #A4C83F;
-    height: 16vh;
-    width: 11vw;
-    border-radius: 10px;
-    border: 5px solid white;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    margin: 0 auto;
-}
+
 
 /* The picture of the iRizzler family. */
 #iskibidy-family-pic {
     position: absolute;
-    margin-left: 5%;
-    margin-bottom: 5%;
+    margin-left: 8%;
+    display: center;
+    
     width: 11vw;
-    height: 20vh;
+    height: 16vh;
 }
 
 nav#iskibidy-nav{
@@ -222,13 +212,19 @@ nav#icarly-nav ul li a.active {
   .job-card a:hover {
     text-decoration: underline;
   }
-
+  #snaps-content h1 {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-top: 3rem; 
+    color: #fcf7f7; 
+  }
   #snaps-content h2 {
   text-align: center;
   font-size: 2rem;
   font-weight: bold;
   margin-top: 3rem; 
-  color: #333; 
+  color: #fcf7f7; 
 }
 #snaps-content {
     padding-top: 10rem; 
@@ -314,3 +310,37 @@ nav#icarly-nav ul li a.active {
 .social-media a:hover {
     color: #ffcc00;
 }
+
+#search-section{
+    text-align: center;
+    margin: 2rem 0;
+}
+
+#search-bar {
+    width: 300px;
+    padding: 10px;
+    font-size: 1rem;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+  }
+
+#search-bar:focus {
+    border-color: #007bff;
+}
+
+#search-button {
+    padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 10px;
+  }
+  #search-button:hover {
+    background-color: #0056b3;
+  }
+

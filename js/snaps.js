@@ -3,22 +3,36 @@ document.addEventListener("DOMContentLoaded", function () {
     const listingsPerPage = 24;
     let currentPage = 1;
     let jobListings = [];
+    let filteredListings = []; 
   
-    function renderListings(page) {
+    function renderListings(page, listings = jobListings) {
       snapsContent.innerHTML = `
-        <h2>Rizz Your Way Through The Internship Process </h2>
+        <h1>Here at iSkibidy.com we thrive on helping you find the perfect internship. </h1>
+        <h2>Applying and going through the interview process is hard enough, leave researching for us!</h2>
+        <div id="search-section">
+          <input type="text" id="search-bar" placeholder="Rizz Jobs By Type"/>
+          <button id="search-button">Search</button>
+        </div>
         <div id="job-listings"></div>
         <div id="pagination-controls"></div>
       `;
+  
+      const searchBar = document.getElementById("search-bar");
+      const searchButton = document.getElementById("search-button");
+  
+      searchButton.addEventListener("click", handleSearch);
+      searchBar.addEventListener("keyup", (event) => {
+        if (event.key === "Enter") handleSearch();
+      });
   
       const listContainer = document.getElementById("job-listings");
       const paginationControls = document.getElementById("pagination-controls");
   
       const startIndex = (page - 1) * listingsPerPage;
-      const endIndex = Math.min(startIndex + listingsPerPage, jobListings.length);
+      const endIndex = Math.min(startIndex + listingsPerPage, listings.length);
   
       for (let i = startIndex; i < endIndex; i++) {
-        const job = jobListings[i];
+        const job = listings[i];
         const jobCard = document.createElement("div");
         jobCard.className = "job-card";
   
@@ -39,25 +53,43 @@ document.addEventListener("DOMContentLoaded", function () {
         listContainer.appendChild(jobCard);
       }
   
-      const totalPages = Math.ceil(jobListings.length / listingsPerPage);
+      const totalPages = Math.ceil(listings.length / listingsPerPage);
   
       if (page > 1) {
         const prevButton = document.createElement("button");
         prevButton.textContent = "Previous";
-        prevButton.addEventListener("click", () => renderListings(page - 1));
+        prevButton.addEventListener("click", () => renderListings(page - 1, listings));
         paginationControls.appendChild(prevButton);
       }
   
       if (page < totalPages) {
         const nextButton = document.createElement("button");
         nextButton.textContent = "Next";
-        nextButton.addEventListener("click", () => renderListings(page + 1));
+        nextButton.addEventListener("click", () => renderListings(page + 1, listings));
         paginationControls.appendChild(nextButton);
       }
   
       const pageInfo = document.createElement("p");
       pageInfo.textContent = `Page ${page} of ${totalPages}`;
       paginationControls.appendChild(pageInfo);
+    }
+  
+    function handleSearch() {
+      const query = document.getElementById("search-bar").value.toLowerCase();
+      filteredListings = jobListings.filter(
+        (job) =>
+          job.title.toLowerCase().includes(query) ||
+          job.company_name.toLowerCase().includes(query) ||
+          job.locations.some((location) => location.toLowerCase().includes(query))
+      );
+  
+      currentPage = 1; 
+      renderListings(currentPage, filteredListings);
+  
+      if (filteredListings.length === 0) {
+        const listContainer = document.getElementById("job-listings");
+        listContainer.innerHTML = `<p>No job listings match your search.</p>  `;
+      }
     }
   
     fetch("listings.json")
@@ -69,6 +101,7 @@ document.addEventListener("DOMContentLoaded", function () {
       })
       .then((data) => {
         jobListings = data.filter((job) => job.is_visible && job.active);
+        filteredListings = [...jobListings];
         renderListings(currentPage);
       })
       .catch((error) => {

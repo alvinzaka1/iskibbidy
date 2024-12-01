@@ -1,0 +1,290 @@
+body{
+    font-family: 'Poppins', sans-serif;
+    overflow: auto;
+    background-color: #7bb4f5;
+}
+
+#iskibidy-container {
+    position: relative;
+    background-color: #7C2899; 
+    height: 15vh; 
+    border: 5px solid #fff53d; 
+    border-radius: 10px; 
+    top: 5vh; 
+    margin: 0 3vw; 
+ }
+
+#iskibidy-shape {
+    position: absolute;
+    background-color: #D2008F; 
+    clip-path: polygon(0 0, 100% 27%, 100% 78%, 0 100%); 
+    width: 32vw; 
+    height: 18vh; 
+    top: -6vh; 
+    left: 14vw; 
+}
+
+#iskibidy-logo {
+    position: absolute;
+    left: 14vw;
+    top: -8vh; 
+    margin-bottom: 20px;
+}
+#iskibidy-family {
+    position: absolute;
+    background-color: #fff53d;
+    height: 18vh;
+    width: 13vw;
+    right: 10vw;
+    border-radius: 10px;
+    top: -6vh;
+}
+
+/* The second background behind the iRizzler family. */
+#iskibidy-family-bg {
+    position: absolute;
+    background-color: #A4C83F;
+    height: 16vh;
+    width: 11vw;
+    border-radius: 10px;
+    border: 5px solid white;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+}
+
+/* The picture of the iRizzler family. */
+#iskibidy-family-pic {
+    position: absolute;
+    margin-left: 5%;
+    margin-bottom: 5%;
+    width: 11vw;
+    height: 20vh;
+}
+
+nav#iskibidy-nav{
+    background: linear-gradient(90deg, #ffccff, #ffd9cc);
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-top: 90px;
+}
+
+nav#iskibidy-nav ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 15px;
+}
+
+nav#iskibidy-nav ul li {
+    position: relative;
+}
+
+nav#iskibidy-nav ul li a{
+    display: block;
+    padding: 10px 20px;
+    color: #900090;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    background: #ffd9cc; 
+    border: 2px solid #ff99cc;
+    border-radius: 15px; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15); 
+    transition: all 0.3s ease-in-out;
+}
+
+nav#iskibidy-nav ul li a:hover{
+    background: #ff99cc;
+    color: white;
+    transform: scale(1.1);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.25);
+}   
+
+nav#icarly-nav ul li a.active {
+    background: #ffccff;
+    border-color: #ff66b2;
+}
+
+@media (max-width: 768px) {
+    nav#iskibidy-nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    nav#iskibidy-nav ul li a {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+#i {
+    font-size: 150px;
+    color: #fff53d;
+    -webkit-text-stroke: 0.5px darkblue; /* width and color */
+    text-shadow: 0px 0px 0 rgb(239,229,45),
+                 1px -1px 0 rgb(224,214,30),
+                 2px -2px 0 rgb(208,198,14),
+                 3px -3px  0 rgb(192,182,0),
+                 4px -4px 3px rgba(0,0,0,0.6),
+                 4px -4px 1px rgba(0,0,0,0.5),
+                 0px 0px 3px rgba(0,0,0,.2);
+ }
+
+#skibi {
+    font-size: 150px;
+    color: #24f1fc;
+    -webkit-text-stroke: 0.5px darkblue; /* width and color */
+    text-shadow: 0px 0px 0 rgb(20,225,236),
+                 1px -1px 0 rgb(5,210,221),
+                 2px -2px 0 rgb(-11,194,205),
+                 3px -3px  0 rgb(-27,178,189),
+                 4px -4px 3px rgba(0,0,0,0.6),
+                 4px -4px 1px rgba(0,0,0,0.5),
+                 0px 0px 3px rgba(0,0,0,.2);
+ }
+
+ #dy {
+       font-size: 150px;
+       color: #24f1fc;
+       -webkit-text-stroke: 0.5px darkblue; /* width and color */
+       text-shadow: 0px 0px 0 rgb(7,212,223),
+                    -1px -1px 0 rgb(-22,183,194),
+                    -2px -2px 0 rgb(-51,154,165),
+                    -3px -3px 0 rgb(-80,125,136),
+                    -4px -4px  0 rgb(-109,96,107),
+                    -5px -5px 4px rgba(0,0,0,0.48),
+                    -5px -5px 1px rgba(0,0,0,0.5),
+                    0px 0px 4px rgba(0,0,0,.2);
+ }
+
+ #com {
+       font-size: 100px;
+       color: #fff53d;
+       -webkit-text-stroke: 0.5px darkblue; /* width and color */
+       text-shadow: 0px 0px 0 rgb(226,216,32),
+                    -1px -1px 0 rgb(197,187,3),
+                    -2px -2px 0 rgb(168,158,0),
+                    -3px -3px 0 rgb(139,129,0),
+                    -4px -4px  0 rgb(110,100,0),
+                    -5px -5px 4px rgba(0,0,0,0.48),
+                    -5px -5px 1px rgba(0,0,0,0.5),
+                    0px 0px 4px rgba(0,0,0,.2);
+ }
+
+
+
+/* All ontop is just the navigation part plus the logo and the family picture. */
+
+
+/*Footer area*/
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-container p {
+    margin: 0;
+    font-size: 1rem;
+}
+
+.social-media {
+    margin-top: 10px;
+}
+
+.social-media a {
+    color: #fff;
+    margin: 0 10px;
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+
+.social-media a:hover {
+    color: #ffcc00;
+}
+
+#tv-gallery{
+    background-image: url('../img/movie_theater.png'); 
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat; 
+    padding: 50px 0;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.8); 
+}
+/* Creator Group Styles */
+.creator-group {
+    margin-bottom: 40px; 
+}
+
+.creator-group h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: #fff;
+    margin-top: 80px;
+    margin-bottom: 20px;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+.creator-group h2 a {
+    text-decoration: none;
+    color: #fff; 
+    font-size: 2rem;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); 
+    transition: color 0.3s ease;
+}
+
+.creator-group h2 a:hover {
+    color: #ffcc00; 
+    text-shadow: 0 0 10px rgba(255, 204, 0, 0.7);
+}
+
+/* Row of TVs */
+.tv-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* TV Screen Styles */
+.tv-screen {
+    position: relative;
+    width: 300px;
+    height: 500px;
+    background: #333;
+    border: 10px solid #666;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+}
+
+.tv-screen video {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.tv-screen:hover {
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.5);
+    transform: scale(1.05);
+    transition: all 0.3s ease-in-out;
+}
