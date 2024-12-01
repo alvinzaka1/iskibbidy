@@ -183,7 +183,31 @@ nav#icarly-nav ul li a.active {
 
 /* All ontop is just the navigation part plus the logo and the family picture. */
 
-
+.image-column {
+    position: fixed;
+    top: 0;
+    width: 150px;
+    height: 100%;
+    display: flex;
+    flex-direction: column; 
+    justify-content: space-evenly; 
+    align-items: center; 
+    pointer-events: none; 
+    z-index: 1;
+  }
+  
+  .image-column.left {
+    left: 0; 
+  }
+  
+  .image-column.right {
+    right: 0;
+  }
+  
+  .image-column img {
+    width: 120px; 
+    height: auto;
+  }
 
 section{
     position: relative;
