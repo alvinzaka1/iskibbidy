@@ -41,8 +41,8 @@ const optionB = document.getElementById("optionB");
 const optionC = document.getElementById("optionC");
 const optionD = document.getElementById("optionD");
 const submitBtn = document.getElementById("submit");
-const successImage = "../img/dancinggibby.gif";
-const failImage = "../img/sadgibby.png";
+const successImage = "img/dancinggibby.gif";
+const failImage = "img/sadgibby.png";
 
 let currentQuiz = 0;
 let score = 0;
